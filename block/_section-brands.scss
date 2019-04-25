@@ -1,0 +1,25 @@
+.section-brand {
+  padding: 44px 0;
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@include max768 {
+
+  .section-brand {
+    border-bottom: 1px solid #d9d9d9;
+    padding: 20px 0;
+  }
+
+  .brands {
+    flex-wrap: wrap;
+
+    .brands-item {
+      width: 33.33%;
+    }
+  }
+}

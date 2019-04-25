@@ -1,0 +1,323 @@
+.section-homepage-overview {
+  min-height: 993px;
+  margin-top: 42px;
+  margin-bottom: 90px;
+  background: url('../img/overview-bg.svg') center 32% no-repeat;
+  background-size: 100%;
+}
+
+.overview-block {
+  position: relative;
+  margin-bottom: 114px;
+}
+
+.overview-product-image {
+  max-width: 387px;
+  margin: 48px auto 0;
+  text-align: center;
+  position: relative;
+}
+
+.overview-info {
+  position: absolute;
+  z-index: 10;
+  max-width: 330px;
+
+  &-image {
+    max-width: 156px;
+    margin-bottom: 13px;
+  }
+
+  h5 {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: $title-color;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.overview-info-1 {
+  top: 10px;
+  left: 4px;
+}
+
+.overview-info-2 {
+  top: -135px;
+  right: -60px;
+}
+
+.overview-info-3 {
+  top: 185px;
+  right: -120px;
+  color: $white;
+
+  h5 {
+    color: inherit;
+  }
+
+  p {
+    color: inherit;
+  }
+}
+
+.overview-info-4 {
+  top: 314px;
+  right: 34px;
+  color: $white;
+
+  h5 {
+    color: inherit;
+  }
+
+  p {
+    color: inherit;
+  }
+}
+
+.overview-info-5 {
+  top: 433px;
+  right: -118px;
+}
+.overview-info-6 {
+  top: 511px;
+  right: 291px;
+}
+
+.overview-pointer {
+  position: absolute;
+  z-index: 1;
+}
+
+.overview-pointer-1 {
+  top: 78px;
+  left: 80px;
+  max-width: 4px;
+}
+
+.overview-pointer-2 {
+  top: 81px;
+  left: 155px;
+  max-width: 233px;
+}
+
+.overview-pointer-3 {
+  top: -55px;
+  right: 195px;
+  max-width: 418px;
+}
+
+.overview-pointer-4 {
+  top: 92px;
+  right: 212px;
+  max-width: 97px;
+}
+
+.overview-pointer-5 {
+  top: 131px;
+  right: 213px;
+  max-width: 95px;
+}
+
+.overview-pointer-6 {
+  top: 295px;
+  right: 132px;
+  max-width: 183px;
+}
+
+.overview-pointer-7 {
+  right: 349px;
+  bottom: 34px;
+  max-width: 152px;
+}
+
+.overview-button {
+  max-width: 430px;
+  text-align: center;
+  margin: 30px auto 0;
+
+  p {
+    display: none;
+    font-size: 14px;
+    color: $grey-text;
+    font-weight: 600;
+  }
+}
+
+.overview-mobile-button {
+  display: none;
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &.active {
+    z-index: 100;
+  }
+}
+
+.overview-mobile-button-1 {
+  top: 77px;
+  left: 75px;
+}
+.overview-mobile-button-2 {
+  top: -20px;
+  left: 108px;
+}
+.overview-mobile-button-3 {
+  top: 10px;
+  right: 45px;
+}
+.overview-mobile-button-4 {
+  top: 85px;
+  right: 80px;
+}
+
+.overview-mobile-button-5 {
+  top: 180px;
+  right: 58px;
+}
+
+.overview-mobile-button-6 {
+  bottom: 0;
+  right: 77px;
+}
+
+.overview-info-modal {
+  .overview-info-image {
+    display: inline-block;
+    max-width: 83px;
+    margin-right: 22px;
+  }
+
+  h5 {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: $title-color;
+    font-size: $fs-base;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+
+.overview-info-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+
+  a {
+    display: block;
+    max-width: 47px;
+  }
+}
+
+@media (max-width: $container) {
+
+  .section-homepage-overview {
+    min-height: 0;
+  }
+
+  .overview-info,
+  .overview-pointer {
+    display: none;
+  }
+
+  .overview-mobile-button {
+    display: block;
+  }
+
+  .overview-button {
+
+    .btn-block {
+      width: auto;
+      max-width: 257px;
+      margin: auto;
+    }
+
+    p {
+      display: block;
+    }
+  }
+
+  .overview-block {
+    margin-bottom: 0;
+  }
+
+  .overview-product-image {
+    height: 407px;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+}
+
+
+@media (max-width: 375px) {
+
+  .overview-mobile-button-1 {
+    left: 55px;
+  }
+
+  .overview-mobile-button-2 {
+    left: 85px;
+  }
+
+  .overview-mobile-button-4 {
+    right: 55px;
+  }
+
+  .overview-mobile-button-3 {
+    right: 30px;
+  }
+
+  .overview-mobile-button-5 {
+    right: 40px;
+  }
+
+  .overview-mobile-button-6 {
+    right: 60px;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .overview-mobile-button-1 {
+    left: 23px;
+  }
+
+  .overview-mobile-button-2 {
+    left: 62px;
+  }
+
+  .overview-mobile-button-3 {
+    right: 5px;
+  }
+
+  .overview-mobile-button-4 {
+    right: 30px;
+  }
+
+  .overview-mobile-button-5 {
+    right: 8px;
+  }
+
+  .overview-mobile-button-6 {
+    right: 33px;
+  }
+}

@@ -1,0 +1,182 @@
+.hero {
+  padding: 40px 0;
+  background: url('../img/hero-bg.png') 0 60% no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color: $white;
+
+  .container {
+    position: relative;
+    z-index: 10;
+    max-width: $container-big;
+  }
+
+  &-logo {
+    max-width: 255px;
+    margin-bottom: 7px;
+  }
+
+  h1 {
+    font-weight: 700;
+    margin-bottom: 25px;
+    max-width: 90%;
+  }
+
+  p {
+    max-width: 70%;
+    margin-bottom: 33px;
+    line-height: 1.5;
+    color: inherit;
+  }
+
+  .hero-watch-video {
+    display: none;
+    text-align: center;
+    max-width: 90px;
+    margin: 190px auto 0;
+
+    a {
+      color: $blue;
+      font-size: $fs-base;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 72px;
+    }
+  }
+
+  .hero-image {
+    margin-bottom: 10px;
+    max-width: 320px;
+  }
+
+  .hero-buttons {
+    margin-left: -32%;
+
+    .btn {
+      margin-right: 20px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+@include max991 {
+
+  .hero {
+    background-color: $blue-bg;
+
+    .hero-video {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-image {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      margin: 30px auto 0;
+      text-align: center;
+    }
+  }
+
+}
+
+@include max768 {
+
+  .hero {
+    background: url('../img/hero-bg-mobile.png') top center no-repeat;
+    background-size: 100%;
+    padding: 20px 0;
+
+    h1 {
+      font-size: $fs-large;
+      max-width: 295px;
+      line-height: 1.52;
+    }
+
+    .hero-text {
+      display: none;
+    }
+
+    .hero-mobile-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .hero-watch-video {
+      display: block;
+    }
+
+    .hero-image {
+      margin-top: 0;
+
+      img {
+        display: block;
+        max-height: 100%;
+      }
+    }
+  }
+
+  .hero-video {
+    display: none;
+  }
+
+  .hero-logo {
+    max-width: 124px;
+  }
+
+}
+
+@include media(700px) {
+
+  .hero {
+    .hero-watch-video {
+      margin-top: 0;
+    }
+
+    .hero-image {
+      height: 213px;
+    }
+  }
+}
+
+@media (max-width: 414px) {
+  .hero .hero-watch-video {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero .hero-watch-video {
+    margin-top: -24px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero .hero-watch-video {
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    .hero-watch-video {
+      margin-top: -100px;
+    }
+
+    .hero-buttons .btn {
+      margin-right: 15px;
+    }
+  }
+}

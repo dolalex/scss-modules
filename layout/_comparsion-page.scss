@@ -1,0 +1,33 @@
+.comparsion-page {
+  overflow: hidden;
+
+  .section-comparsion {
+    margin-top: 0;
+
+    .container {
+      background-color: inherit;
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 600;
+    }
+
+  }
+
+  @include max768 {
+    .section-comparsion {
+      .container {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

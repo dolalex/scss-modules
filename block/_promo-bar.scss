@@ -1,0 +1,79 @@
+.promo-bar {
+  background: $grey-light;
+  font-size: $fs-small;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-height: 41px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+
+    .promo-bar-icon svg {
+      fill: $white;
+    }
+
+    .promo-bar-text {
+      color: inherit;
+    }
+  }
+
+  @include max991 {
+    font-size: $fs-extra-small;
+  }
+}
+
+.promo-bar-icon {
+  width: 35px;
+
+  svg {
+    fill: $grey;
+    transition: all 0.6s;
+  }
+
+  &.left {
+    margin-right: $space-base;
+  }
+
+  &.right {
+    margin-left: $space-base;
+  }
+}
+
+.promo-bar-text {
+  color: $blue-dark;
+}
+
+.promo-bar-cart {
+  background: $blue-dark;
+  color: $white;
+
+  .container {
+    max-width: 1100px;
+  }
+
+  .benefits-item {
+    font: 15px $font-family-additional;
+    font-weight: 600;
+    color: inherit;
+
+    i {
+      margin-right: 5px;
+    }
+
+    @include max768 {
+      display: none;
+
+      &:first-child {
+        display: block;
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

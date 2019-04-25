@@ -1,0 +1,60 @@
+.blog-nav {
+  margin: 20px 0;
+
+  @include max768 {
+    margin: 10px 0;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+
+    li {
+      border-right: $border-1px;
+      box-sizing: border-box;
+
+      &:last-of-type {
+        border: none;
+      }
+
+      &.active {
+        a {
+          color: $blue;
+        }
+      }
+
+      @include max768 {
+        width: 50%;
+        border: none;
+      }
+    }
+
+    a {
+      display: block;
+      color: $blue-dark;
+      padding: 8px 55px;
+      font-weight: 600;
+      text-decoration: none;
+
+      @include max768 {
+        padding: 5px $space-base;
+      }
+    }
+  }
+}
+
+.social-nav {
+  display: flex;
+  justify-content: center;
+
+  li {
+    a {
+      font-size: 44px;
+      color: $blue;
+      padding: 0 20px;
+    }
+  }
+}

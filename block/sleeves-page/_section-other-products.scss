@@ -1,0 +1,33 @@
+.section-other-products {
+  border-top: 2px solid $border-color;
+  padding: 25px 0 80px;
+
+  h4 {
+    margin-bottom: 25px;
+  }
+
+  .also-like-products {
+    display: flex;
+    align-items: center;
+
+    .product-item {
+      padding-right: 30px;
+      padding-left: 0;
+      border: none;
+      text-align: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .product-price {
+      margin: 24px 0 2px;
+      font-weight: 600;
+    }
+  }
+
+  @include max991 {
+    display: none;
+  }
+}

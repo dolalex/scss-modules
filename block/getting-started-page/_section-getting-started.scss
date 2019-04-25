@@ -1,0 +1,128 @@
+.section-getting-started {
+  padding: 22px 0 80px;
+  counter-reset: heading;
+  overflow: hidden;
+
+  .container {
+    max-width: $container-large;
+  }
+
+  h1 {
+    font: 53px $font-family-additional;
+    font-weight: 900;
+    color: $grey-dark;
+    position: relative;
+    margin-bottom: 66px;
+    margin-left: 4.5%;
+
+    span {
+      position: relative;
+      z-index: 10;
+      padding-left: 10px;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      width: 171px;
+      height: 174px;
+      background: url('../img/title-squares.png');
+      background-size: cover;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      z-index: 1;
+    }
+
+    @include max768 {
+      font-size: 33px;
+      margin-bottom: 34px;
+
+      &:before {
+        width: 115px;
+        height: 117px;
+      }
+    }
+
+    @include media(360px){
+      font-size: 28px;
+    }
+  }
+
+  .you-need {
+    max-width: 70%;
+    display: block;
+    font-family: $font-family-additional;
+    font-weight: 600;
+    color: $grey-dark;
+    margin-left: 21.5%;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $border-color;
+
+    i {
+      font-size: 25px;
+    }
+
+    @include media(1100px) {
+      margin-left: 30%;
+      max-width: 60%;
+    }
+
+    @include max768 {
+      margin-left: 150px;
+      font-size: $fs-small;
+    }
+  }
+}
+
+.best-products {
+  white-space: nowrap;
+  margin-top: 40px;
+}
+
+.best-product-item {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  box-sizing: border-box;
+  width: 210px;
+
+  &:first-child {
+    width: 310px;
+  }
+}
+
+.best-product-item-container {
+  background: #DAEBFF;
+  color: $grey-dark;
+  text-align: center;
+  padding: 40px 0;
+  height: 569px;
+  box-sizing: inherit;
+}
+
+.best-product-image {
+  height: 360px;
+  margin-bottom: 45px;
+
+  img {
+    max-height: 100%;
+  }
+}
+
+.best-product-title {
+  border-bottom: 2px solid $white;
+  max-width: 132px;
+  margin: 0 auto;
+  padding-bottom: $space-base;
+
+  h3 {
+    font-size: $fs-base;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    color: inherit;
+  }
+}

@@ -1,0 +1,246 @@
+.section-comparsion {
+  margin-top: 280px;
+
+  .container {
+    max-width: 1170px;
+    background: #FAFCFF;
+    padding-top: 56px;
+    padding-bottom: 126px;
+    position: relative;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 85px;
+      position: absolute;
+      top: -85px;
+      left: 0;
+      background: #FAFCFF;
+      margin-top: 1px;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      width: 100%;
+      height: 47px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $white;
+      margin-top: 1px;
+      -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+
+    @include max768 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.comparsion-content {
+  max-width: $container;
+  margin: 55px auto 0;
+}
+
+.comparsion-wrap {
+  display: flex;
+}
+
+.comparsion-item {
+  width: 50%;
+  position: relative;
+
+  &:after {
+    display: none;
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 23px 20px;
+    border-color: transparent transparent $blue transparent;
+  }
+
+  &:before {
+    display: none;
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 23px 27px 23px;
+    border-color: transparent transparent $blue-dark transparent;
+  }
+  
+  &:last-of-type {
+    .price {
+      .your-price {
+        color: $title-color;
+      }
+    }
+  }
+
+  &-wrap {
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .product-image {
+    height: 436px;
+    margin-bottom: 18px;
+    text-align: center;
+
+    img {
+      display: block;
+      max-height: 100%;
+      margin: auto;
+    }
+  }
+
+  &.active {
+
+    &:after, &:before {
+      display: block;
+    }
+
+    .product-title {
+      opacity: 1;
+    }
+  }
+
+  .product-title {
+    font-size: $fs-large;
+    font-family: $font-family-additional;
+    font-weight: 700;
+    color: $grey-dark;
+    margin-bottom: 20px;
+    opacity: 0.5;
+  }
+}
+
+.comparsion-item-button {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  .btn {
+    max-width: 300px;
+  }
+}
+
+.comparsion-line {
+  display: none;
+  border-top: 3px solid $blue-dark;
+  margin: 40px 0 30px;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding-top: $space-large;
+
+  &.active {
+    display: flex;
+  }
+
+  &-item {
+    max-width: 144px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &.disable {
+      opacity: 0.5;
+    }
+
+    .icon {
+      height: 44px;
+      margin-bottom: $space-base;
+    }
+
+    .text {
+      font-family: $font-family-additional;
+      font-weight: 700;
+      color: $grey-dark;
+    }
+  }
+}
+
+.comparsion-footer {
+  max-width: 430px;
+  margin: 30px auto 0;
+  text-align: center;
+
+  .btn {
+    margin-bottom: 20px;
+  }
+}
+
+@include max768 {
+
+  .section-comparsion {
+    margin-top: 120px;
+  }
+
+  .comparsion-item {
+    padding: 0 10px;
+
+    &:first-child {
+      border-right: 1px solid #d9d9d9;
+    }
+
+    .product-title {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .product-image {
+      height: 226px;
+    }
+  }
+
+  .comparsion-line {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .comparsion-line-item {
+    max-width: none;
+    width: 33.33%;
+    margin-bottom: $space-base;
+
+    .text {
+      font-size: $fs-small;
+    }
+  }
+
+  .comparsion-footer {
+
+    .btn-primary {
+      max-width: 226px;
+      line-height: 53px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+}
+

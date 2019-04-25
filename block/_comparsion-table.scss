@@ -1,0 +1,72 @@
+.section-comparsion-table {
+  padding-bottom: 120px;
+
+  h4 {
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+.comparsion-table {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comparsion-table-item {
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.comparsion-table-wrap {
+  padding: 30px $space-base;
+}
+
+.comparsion-table-item-content {
+  border-bottom: $default-border;
+  box-sizing: border-box;
+  height: 450px;
+
+  .comparsion-table-image {
+    height: 360px;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  p {
+    max-width: 340px;
+    margin: auto;
+  }
+}
+
+@include max768 {
+
+  .section-comparsion-table {
+    padding-top: 40px;
+    border-top: $default-border;
+    margin: 0 -15px;
+  }
+
+  .comparsion-table-item {
+    padding-left: $space-base;
+    padding-right: $space-base;
+  }
+
+  .comparsion-table-item-content {
+    height: auto;
+    padding-bottom: 30px;
+    font-size: 11px;
+
+    .comparsion-table-image {
+      height: auto;
+    }
+  }
+
+  .comparsion-table-wrap {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+}

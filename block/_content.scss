@@ -1,0 +1,31 @@
+.content {
+  padding: 75px 0 120px;
+
+  @include max768 {
+    padding: $space-base 0 25px;
+  }
+}
+
+.content-top-nav {
+  position: absolute;
+  width: 100%;
+
+  a {
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @include max991 {
+    padding: 20px 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  @include max768 {
+    position: relative;
+  }
+}
+
+

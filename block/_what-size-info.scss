@@ -1,0 +1,25 @@
+.what-size-info {
+  border-left: $default-border;
+}
+
+.what-size-info-content {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.what-size-image {
+  margin-right: -80px;
+}
+
+@include max991 {
+  .what-size-info {
+    border-left: none;
+    border-top: $default-border;
+  }
+
+  .what-size-image {
+    margin-right: 0;
+  }
+}

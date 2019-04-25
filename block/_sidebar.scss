@@ -1,0 +1,72 @@
+.sidebar {
+  display: block;
+  box-sizing: border-box;
+  float: left;
+}
+
+.sidebar-filter {
+  width: $sidebar-width;
+  margin-right: $sidebar-margin;
+}
+
+.widget {
+  margin-bottom: 65px;
+
+  &-title {
+    border-bottom: 2px solid $border-color;
+  }
+
+  &-content {
+    padding-top: 12px;
+  }
+
+  h4 {
+    margin-bottom: 12px;
+  }
+
+  p {
+    margin: 0 0 7px 0;
+  }
+
+  .custom-checkbox {
+    margin-bottom: 28px;
+
+    label {
+      font-family: $font-family-additional;
+      font-weight: 700;
+    }
+  }
+
+  @include max768 {
+    margin-bottom: 30px;
+  }
+}
+
+.sidebar-reviews {
+  width: 230px;
+  box-sizing: border-box;
+
+  .reviews-total {
+    margin-bottom: 44px;
+  }
+
+  &>p {
+    color: inherit;
+    font-weight: 400;
+    margin: 10px 0;
+
+    strong {
+      font-weight: 600;
+    }
+  }
+
+  .remove-all {
+    display: block;
+    color: $blue-dark;
+    margin-bottom: $space-large;
+  }
+
+  .reviews-progress {
+    margin-bottom: 55px;
+  }
+}

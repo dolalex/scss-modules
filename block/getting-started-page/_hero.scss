@@ -1,0 +1,33 @@
+.hero-getting-started {
+  padding: 70px 0;
+  overflow: hidden;
+
+  .container {
+    max-width: $container-big;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    color: $grey-text;
+    margin-bottom: 25px;
+  }
+
+  .hero-img {
+    max-height: 632px;
+  }
+
+  @include max768 {
+    padding: 20px 0;
+
+    .hero-video {
+      display: block;
+    }
+
+    .hero-img {
+      transform: translateX(27%);
+    }
+  }
+}

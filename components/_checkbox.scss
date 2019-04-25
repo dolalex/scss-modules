@@ -1,0 +1,53 @@
+.custom-checkbox {
+
+  input[type="checkbox"] {
+    display:none;
+  }
+
+  input[type="checkbox"] + label {
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 22px;
+      width: 22px;
+      margin-right: 5px;
+      background: url('../img/checkbox.png');
+      background-size: cover;
+      float: left;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    &:before {
+      background: url('../img/checkbox-checked.png');
+      background-size: cover;
+    }
+  }
+
+
+  input[type="checkbox"]:disabled + label {
+
+  }
+
+}
+
+.price-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $space-base;
+
+  label {
+    font-family: $font-family-additional;
+    font-weight: 600;
+    color: $blue-dark;
+  }
+}

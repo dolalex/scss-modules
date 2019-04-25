@@ -1,0 +1,193 @@
+footer {
+  background: #1E2833;
+  padding: 45px 0 26px;
+  color: $white;
+  margin-top: 50px;
+  position: relative;
+  $el-height: 63px;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: $el-height;
+    position: absolute;
+    top: -$el-height;
+    left: 0;
+    background: #1E2833;
+    margin-top: 1px;
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    width: 10px;
+    height: calc(100% + 63px);
+    position: absolute;
+    bottom: 0;
+    left: 56.35%;
+    background-color: #fff;
+  }
+
+  .jerk-logo {
+    max-width: 169px;
+    display: block;
+
+    img {
+      display: block;
+    }
+  }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+  }
+}
+
+.footer-left {
+  float: left;
+  width: 56%;
+}
+
+.footer-right {
+  float: left;
+  width: 330px;
+  padding-left: 10%;
+}
+
+.footer-menu-container {
+  display: flex;
+  margin-bottom: 30px;
+
+  .footer-menu {
+    &:first-child {
+      width: 207px;
+    }
+  }
+}
+
+.footer-menu {
+  font-size: $fs-small;
+
+  li {
+    margin-bottom: 2px;
+  }
+
+  a {
+    color: inherit;
+    font-weight: 700;
+  }
+}
+
+.footer-block-right {
+  display: flex;
+  align-items: center;
+}
+
+$footer-right-margin-bottom: 26px;
+
+.customer-telephone {
+  font: 24px $font-family-additional;
+  margin-bottom: $footer-right-margin-bottom;
+}
+
+.social-icons {
+  border-left: 1px solid #979797;
+  font-size: 33px;
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: $space-base;
+  margin-left: $space-base;
+  margin-bottom: $footer-right-margin-bottom;
+
+  li {
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.subscribe-block {
+  font-size: 19px;
+  color: $grey2;
+
+  p {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: inherit;
+  }
+
+  input {
+    background: rgba(255,255,255,0.06);
+    border-bottom: 1px solid $blue;
+    color: $grey2;
+    border-radius: 2px;
+  }
+}
+
+.copyright {
+  font-size: 11px;
+  color: $grey2;
+}
+
+@media (max-width: $container + 30px) {
+
+  footer {
+    .container {
+      padding-left: $space-base;
+      padding-right: $space-base;
+    }
+  }
+
+  .footer-right {
+    padding-left: 5%;
+  }
+
+}
+
+@include max991 {
+
+  footer {
+    padding-bottom: 60px;
+
+    .copyright {
+      position: absolute;
+      bottom: $space-base;
+      left: $space-base;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .footer-left,
+  .footer-right {
+    float: none;
+    width: 100%;
+  }
+
+  .footer-right {
+    border-top: 3px solid $white;
+    margin: 20px -15px 0;
+    padding: 25px $space-base 0;
+  }
+
+}

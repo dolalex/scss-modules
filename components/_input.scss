@@ -1,0 +1,82 @@
+input[type="text"], input[type="email"] {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  background: $grey-bg;
+  text-align: left;
+  padding: 0 $input-padding;
+  border: none;
+  border-bottom: 2px solid $blue-dark;
+  border-radius: 4px;
+}
+
+textarea {
+  @extend input[type="text"];
+  display: block;
+  padding: $input-padding;
+  resize: none;
+  min-height: 120px;
+  height: auto;
+}
+
+@include placeholder {
+  color: $grey2;
+}
+
+.input-button-inside {
+  position: relative;
+
+  button {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: $input-padding;
+    color: $blue;
+    font-weight: 600;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  input {
+    padding-right: 80px;
+  }
+}
+
+.input-box {
+  position: relative;
+
+  &.filled {
+    input {
+      padding-top: 18px;
+    }
+
+    textarea {
+      padding-top: 30px;
+    }
+  }
+
+  &.error {
+    input {
+      border-color: $error-color;
+      padding-top: 18px;
+    }
+
+    .label {
+      color: $error-color;
+    }
+  }
+
+  .label {
+    font: $fs-smaller $font-roboto;
+    position: absolute;
+    top: 10px;
+    left: $input-padding;
+  }
+
+  .error-message {
+    padding-left: $input-padding;
+    font: $fs-smaller $font-roboto;
+    color: $error-color;
+  }
+}

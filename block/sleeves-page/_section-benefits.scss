@@ -1,0 +1,54 @@
+.section-benefits {
+  padding: 25px 0;
+  background: #F6F7FD;
+  border-top: $default-border;
+
+  .container {
+    max-width: $container-big;
+  }
+}
+
+.benefits {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &-item {
+    width: 100%;
+    color: #7b8795;
+  }
+
+  &-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  &-title {
+    font-size: 17px;
+    font-family: $font-family-additional;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+}
+
+@include max768 {
+
+  .section-benefits {
+    padding-bottom: 0;
+    border-top: none;
+  }
+
+  .benefits {
+    flex-wrap: wrap;
+
+    &-item {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+
+    &-title {
+      font-size: 14px;
+    }
+  }
+
+}

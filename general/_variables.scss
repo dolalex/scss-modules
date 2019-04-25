@@ -1,0 +1,87 @@
+$white:                         #ffffff;
+$black:                         #2C3948;
+$grey:                          #9A9A9A;
+$grey2:                         #BFBFBF;
+$grey-text:                     #9B9B9B;
+$grey-dark:                     #444444;
+$grey-light:                    #EFEFEF;
+$grey-bg:                       #FAFAFA;
+
+$pink:                          #414ECC;
+$blue:                          #3D96FF;
+$blue-bg:                       #64abff;
+$blue-dark:                     #36485D;
+
+$green:                         #009a66;
+$green-hover:                   #02885b;
+$red:                           #FF435A;
+$red-hover:                     #ca1113;
+
+$nav-menu-hover:                #e9f3ff;
+$nav-menu-focus:                #87a5c7;
+
+
+// Fonts
+
+$font-family-main:              'Source Sans Pro', sans-serif;
+$font-family-additional:        'Rubik';
+$font-roboto:                   'Roboto';
+$main-font-color:               $grey-dark;
+
+$paragraph-color:               $grey-text;
+$title-color:                   #444444;
+$border-color:                  #d9d9d9;
+
+$error-color:                   $red;
+
+$default-font-size:             16px;
+
+$fs-extra-small:                10px;
+$fs-smaller:                    12px;
+$fs-small:                      13px;
+$fs-base:                       $default-font-size;
+$fs-large:                      24px;
+$fs-extra-large:                30px;
+$fs-title:                      36px;
+$fs-title-main:                 43px;
+
+$default-line-height:           1.5;
+
+
+// Space
+
+$space-base:                    15px;
+$space-minimal:                 10px;
+$space-large:                   35px;
+$default-padding:               45px;
+$full-width:                    100%;
+
+$navbar-top-padding:            17px;
+$input-padding:                 16px;
+
+
+// Sizes
+
+$container:                     1030px;
+$container-big:                 1130px;
+$container-large:               1230px;
+$content-container:             785px;
+$screen-lg:                     1200px;
+$screen-md:                     991px;
+$screen-sm:                     769px;
+$screen-xs:                     667px;
+
+$sidebar-width:                 270px;
+$sidebar-margin:                30px;
+
+// Borders
+
+$default-border:                2px solid $border-color;
+$border-1px:                    1px solid $border-color;
+$border-bold:                   3px solid #efefef;
+
+// Shadows
+
+$navbar-shadow:                0 0 4px 0 rgba(0,0,0,0.13);
+
+

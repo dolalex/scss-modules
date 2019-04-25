@@ -1,0 +1,89 @@
+.custom-radio-circle {
+  input[type="radio"] {
+    display:none;
+  }
+
+  input[type="radio"] + label {
+    display: block;
+    width: 41px;
+    height: 41px;
+    border: $border-bold;
+    border-radius: 50%;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  input[type="radio"]:checked + label {
+    border-color: $blue-dark;
+  }
+}
+
+.custom-radio-image {
+  input[type="radio"] {
+    display:none;
+  }
+
+  input[type="radio"] + label {
+    display: block;
+    width: 91px;
+    height: 91px;
+    border: $border-bold;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  input[type="radio"]:checked + label {
+    border-color: $blue-dark;
+  }
+}
+
+.custom-radio-border {
+  margin-bottom: $space-base;
+
+  input[type="radio"] {
+    display:none;
+  }
+
+  input[type="radio"] + label {
+    display: block;
+    font-weight: 600;
+    cursor: pointer;
+    border: 2px solid $border-color;
+    border-radius: 4px;
+    padding: 6px 5px 6px 35px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+
+    &:before {
+      display: block;
+      content: '';
+      width: 22px;
+      height: 22px;
+      border: 2px solid $border-color;
+      border-radius: 50%;
+      box-sizing: border-box;
+      position: absolute;
+      top: 7px;
+      left: 5px;
+    }
+  }
+
+  input[type="radio"]:checked + label {
+    border-color: $blue-dark;
+
+    &:before {
+      background: url('../img/dot-circle.png') center no-repeat;
+      background-size: cover;
+      border: none;
+    }
+  }
+}
+
+.custom-radio {
+  @extend .custom-radio-border;
+
+  input[type="radio"] + label {
+    border: none;
+  }
+}

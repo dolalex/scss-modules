@@ -1,0 +1,313 @@
+.section-steps {
+  margin: 90px 0 170px;
+
+  .container {
+    max-width: 1040px;
+  }
+
+  .step-title {
+    display: table;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 17px;
+
+    &-image {
+      display: table-cell;
+      vertical-align: top;
+      position: relative;
+      z-index: 10;
+    }
+
+    h2 {
+      display: table-cell;
+      font-size: $fs-title-main;
+      padding-left: 10px;
+      font-weight: 600;
+    }
+
+    &:before {
+      display: inline-block;
+      counter-increment: heading;
+      content: counter(heading);
+      color: $grey-light;
+      font: 99px $font-roboto;
+      font-weight: 700;
+      position: absolute;
+      bottom: 0;
+      left: -50px;
+      z-index: 1;
+    }
+
+    @include max768 {
+      h2 {
+        font-size: 27px;
+      }
+
+      &:before {
+        font-size: 77px;
+      }
+    }
+  }
+
+  .step-video {
+    position: relative;
+    display: inline-block;
+
+    .play-btn-cirlce {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+
+  .gallery-image {
+    margin-bottom: 50px;
+
+    img {
+      height: 137px;
+    }
+
+    @include max768 {
+      margin-bottom: 0;
+
+     img {
+       height: auto;
+       margin-bottom: 40px;
+     }
+
+      p {
+        display: none;
+      }
+    }
+  }
+
+  .step-image-mobile {
+    margin-top: 30px;
+  }
+
+  &.step-1 {
+
+    .step-title {
+      margin-bottom: 18px;
+
+      &:before {
+        bottom: -13px;
+        left: -47px;
+      }
+    }
+
+    .step-image {
+      margin: -90px 0 0 88px;
+      max-width: 364px;
+    }
+  }
+
+  &.step-2 {
+
+    .step-title {
+      margin-left: -10px;
+
+      &:before {
+        bottom: 38px;
+        left: -20px;
+      }
+    }
+
+    .step-image {
+      max-width: 175px;
+      margin: -50px 0 0 -142px;
+    }
+
+    .step-image-mobile {
+      max-width: 82px;
+    }
+  }
+
+  &.step-3 {
+
+    .step-title {
+      margin-bottom: 5px;
+      margin-left: 35px;
+
+      h2 {
+        width: 495px;
+      }
+
+      &:before {
+        bottom: 36px;
+        left: -66px;
+      }
+    }
+
+    .step-title-image {
+      width: 60px;
+    }
+
+    .step-image {
+      max-width: 322px;
+      margin: -45px 0 0 47px;
+    }
+
+    .step-image-mobile {
+      margin-top: 10px;
+    }
+  }
+
+  &.step-4 {
+
+    .step-title {
+      margin-bottom: 5px;
+      margin-left: 30px;
+
+      h2 {
+        vertical-align: middle;
+      }
+
+      &:before {
+        bottom: 7px;
+        left: -60px;
+      }
+    }
+
+    .step-image {
+      max-width: 142px;
+      margin: -65px 0 0 -139px;
+    }
+
+    .step-image-mobile {
+      max-width: 83px;
+    }
+  }
+
+  &.step-5 {
+    .step-title {
+      margin-left: 30px;
+      margin-top: -44px;
+
+      &:before {
+        bottom: 37px;
+        left: -65px;
+      }
+    }
+
+    .step-image {
+      margin-left: -111px;
+    }
+  }
+
+  @include media(1100px) {
+    .step-title {
+      margin-left: 35px !important;
+    }
+
+    &.step-3 {
+      .step-title:before {
+        bottom: 0;
+        left: -40px;
+      }
+    }
+
+    &.step-4 {
+      .step-title:before {
+        bottom: 0;
+        left: -40px;
+      }
+    }
+
+    &.step-5 {
+      .step-title:before {
+        bottom: -6px;
+        left: -47px;
+      }
+    }
+  }
+
+  @include max768 {
+    margin-bottom: 60px;
+
+    .step-image {
+      margin: 20px 0 0 0 !important;
+      max-width: 100% !important;
+    }
+
+    &.step-2 {
+      .step-title:before {
+          bottom: 0;
+          left: -40px;
+      }
+    }
+
+    &.step-5 {
+      margin-bottom: 120px;
+    }
+
+    .container-slider {
+      margin-bottom: 40px;
+    }
+
+    .btn-primary {
+      min-width: 173px;
+    }
+
+    .btn-link {
+      min-width: 120px;
+    }
+
+  }
+
+  @include media(360px) {
+    .btn-primary {
+      min-width: 153px;
+    }
+  }
+
+
+}
+
+.control-item {
+  display: inline-block;
+  width: 200px;
+  color: $grey-dark;
+  margin: 40px 20px 20px 0;
+  position: relative;
+
+  @include max640 {
+    width: 140px;
+    margin-right: 30px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:before {
+    display: block;
+    width: 84px;
+    height: 84px;
+    background: $grey-light;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    z-index: 0;
+  }
+
+  &-content {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 10;
+
+    p {
+      color: inherit;
+    }
+  }
+
+  img {
+    display: inline;
+    max-width: 20px;
+    margin-right: 10px;
+  }
+}
+

@@ -1,0 +1,262 @@
+.modal-cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 430px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: $white;
+  padding: 20px 28px;
+  border: $default-border;
+  z-index: 999;
+  overflow-y: auto;
+  transition: all 0.3s;
+  transform: translateX(100%);
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    color: $grey;
+    border-bottom: 2px solid $border-color;
+    padding-bottom: 5px;
+    position: relative;
+
+    h4 {
+      margin-right: 10px;
+    }
+
+    .quantity {
+      font: 24px $font-family-additional;
+      font-weight: 600;
+      background-color: $blue;
+      color: $white;
+      padding: 4px 21px;
+      border-radius: 15px;
+
+    }
+
+    .close {
+      font-size: 25px;
+      color: $blue-dark;
+      position: absolute;
+      top: -8px;
+      right: 20px;
+
+      @include max768 {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &-message {
+    max-width: 302px;
+    margin-top: 160px;
+
+    h1 {
+      color: $grey-dark;
+    }
+
+    p {
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include max768 {
+      margin-top: 30px;
+    }
+  }
+
+  &-content {
+    .cart-item {
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-total {
+    border-top: $default-border;
+    margin: 0 -28px;
+    padding: $space-base 28px 0;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      color: $grey-dark;
+    }
+
+    .btn {
+      margin-bottom: 22px;
+    }
+
+    .btn-pay {
+      @include max768 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include max768 {
+    position: absolute;
+    top: 103px;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    border: none;
+    border-bottom: $default-border;
+  }
+}
+
+.cart-item {
+  display: flex;
+  flex-wrap: wrap;
+  height: 157px;
+  padding: $space-base 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid $border-color;
+
+  &-thumb {
+    width: 27%;
+    max-height: 127px;
+
+    img {
+      max-height: 100%;
+    }
+  }
+
+  &-content {
+    width: 73%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $grey-dark;
+
+    .title {
+      font: $fs-base $font-family-additional;
+      font-weight: 600;
+    }
+
+    .description {
+      margin-bottom: 10px;
+
+      p {
+        margin: 0;
+        font-weight: 400;
+        color: inherit;
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 0;
+      right: $space-base;
+      font-size: $fs-base;
+      color: $blue-dark;
+
+      @include max768 {
+        right: 0;
+      }
+    }
+
+    .cart-item-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input {
+        max-width: 93px;
+      }
+    }
+
+    .cart-item-price {
+      font: $fs-base $font-family-additional;
+      font-weight: 600;
+    }
+  }
+}
+
+.cart-page {
+  color: $grey-dark;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin-bottom: $space-large;
+  }
+
+  .cart-item {
+    &-thumb {
+      width: 16%;
+    }
+
+    &-content {
+      width: 84%;
+    }
+  }
+
+  .form-group {
+    .data-block {
+      margin-top: 20px;
+    }
+  }
+
+  @include max768 {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .cart-item {
+      &-thumb {
+        width: 25%;
+      }
+
+      &-content {
+        width: 75%;
+      }
+    }
+  }
+}
+
+.order-summary {
+  @include max991 {
+    margin-top: 40px;
+  }
+}
+
+.order-total {
+  margin-top: 50px;
+  border-top: 6px solid $blue-dark;
+  padding-top: $space-base;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    margin-bottom: 22px;
+  }
+}
+
+.total-price {
+  font: 25px $font-family-additional;
+  font-weight: 900;
+
+  span {
+    font-size: $fs-base;
+    font-weight: 600;
+  }
+}

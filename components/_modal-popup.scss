@@ -1,0 +1,171 @@
+.modal-popup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 50;
+  display: none;
+
+  &.grey {
+    background-color: rgba(218, 216, 216, 0.89);
+  }
+
+  &.open {
+    display: block;
+  }
+}
+
+.modal-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  display: none;
+  transform: translate(-50%, -50%);
+
+  &.modal-popup-bottom {
+    width: 100%;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+  &.open {
+    display: block;
+  }
+
+  &.modal-popup-transparent {
+    background-color: transparent;
+  }
+}
+
+.modal-popup-container {
+  padding-top: 40px;
+  background-color: $white;
+  border-top: 3px solid $blue-dark;
+}
+
+.modal-popup-close {
+  position: absolute;
+  left: $space-base;
+  top: -28px;
+  width: 55px;
+  height: 55px;
+  line-height: 56px;
+  font-size: 30px;
+  color: $blue;
+  background-color: $grey-bg;
+  border: 3px solid $blue-dark;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal-popup-header {
+  border-bottom: $default-border;
+  padding-bottom: $space-base;
+  position: relative;
+}
+
+.modal-popup-content {
+  padding: $space-base;
+}
+
+.modal-popup-full-width {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+  background-color: $white;
+  padding-bottom: 100px;
+
+  .container {
+    max-width: $container-large;
+  }
+
+  .modal-popup-container {
+    border-top: none;
+  }
+
+  .modal-popup-close {
+    top: -$space-base;
+    right: $space-base;
+    left: auto;
+    border: none;
+    border-radius: inherit;
+    background-color: $white;
+    line-height: normal;
+
+    i {
+      font-size: 44px;
+    }
+  }
+
+  @include max768 {
+
+    .modal-popup-container {
+      padding-top: 20px;
+    }
+
+    .modal-popup-content {
+      padding: $space-base 0;
+    }
+
+    .modal-popup-close {
+      width: 16px;
+      height: 25px;
+      line-height: 25px;
+      top: -5px;
+
+      i {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.modal-popup-transparent {
+  .modal-popup-container,
+  .modal-popup-close {
+    background-color: inherit;
+  }
+}
+
+.modal-popup-mini {
+  box-sizing: border-box;
+  max-width: 520px;
+  margin: 5% auto;
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  @include max768 {
+    .modal-popup-content {
+      padding: $space-base;
+    }
+  }
+}
+
+.popup-product-option-box {
+  background-color: $white;
+  padding-top: $space-large;
+  border: $default-border;
+  margin-bottom: 40px;
+
+  h4 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 8px;
+  }
+}

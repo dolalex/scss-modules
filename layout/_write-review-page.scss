@@ -1,0 +1,24 @@
+.write-review-page {
+
+  .review-post-link {
+    display: inline-block;
+    margin: 0 0 50px 0;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: $font-family-main;
+    color: $blue-dark;
+    text-decoration: none;
+  }
+
+  .rating > label:before {
+    font-size: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 80px;
+  }
+
+  @include max768 {
+    margin-bottom: 120px;
+  }
+}

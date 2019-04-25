@@ -1,0 +1,50 @@
+.dropdown {
+  position: relative;
+  box-sizing: border-box;
+
+  &.open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .dropdown-menu {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background: $white;
+    padding: 12px;
+    border-radius: 3px;
+    min-width: 120px;
+  }
+}
+
+.dropdown-nav {
+  box-sizing: border-box;
+
+  &.open {
+    .dropdown-nav-menu {
+      display: flex;
+      justify-content: center;
+
+      @include max768 {
+        display: block;
+      }
+    }
+  }
+
+  .dropdown-nav-menu {
+    box-sizing: border-box;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 1000;
+    box-shadow: $navbar-shadow;
+  }
+}
